@@ -4,3 +4,7 @@ filter {
   type => "esxi"
  }
 }
+
+# Puppet format with escaping
+
+#pattern => [ "(?:%{SYSLOGTIMESTAMP:timestamp}|%{TIMESTAMP_ISO8601:timestamp8601}) (?:.* (?:%{SYSLOGFACILITY} )?%{SYSLOGHOST:logsource} %{SYSLOGPROG}|(?:%{SYSLOGFACILITY} )?%{SYSLOGHOST:logsource} %{SYSLOGPROG}): (?:(?:\[[0-9A-Z]{8,8}) (?:%{GREEDYDATA:esxi_loglevel}) \\\'(?:%{GREEDYDATA:esxi_service})\\\'] (?:%{GREEDYDATA:message})|(?:%{GREEDYDATA:message}))" ],
